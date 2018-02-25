@@ -7,7 +7,7 @@ function rotation(degrees) {
 
 
 function setup() {
-    createCanvas(900, 900);
+    createCanvas(300, 300);
 }
 
 function draw(){
@@ -16,79 +16,49 @@ function draw(){
     noStroke();
 
     push() //FLOWER OF LIFE PATTERN
-      ellipse(450,450,210,210)
-    translate(450, 450);
-    blendMode(MULTIPLY);
+      ellipse(450, 450, 210, 210)
+      translate(150, 150);
+      blendMode(MULTIPLY);
       fill(247, 175, 207);
-      ellipse(-60, 0, 120, 120);
-      rotation(60)
-      ellipse(-60, 0, 120, 120);
-      rotation(60)
-      ellipse(-60, 0, 120, 120);
-      rotation(60)
-      ellipse(-60, 0, 120, 120);
-      rotation(60)
-      ellipse(-60, 0, 120, 120);
-      rotation(60)
-      ellipse(-60, 0, 120, 120);
+        for (let i=0; i<6; i++) {
+          ellipse(-60, 0, 120, 120);
+          rotation(60)
+        }
     pop()
 
     push() //CIRCLE FRAMING THE HEXAGON IN THE CENTER
-    blendMode(MULTIPLY);
-    translate(450, 450);
-    fill(247, 76, 207);
-    ellipse(0, 0, 120, 120);
+      blendMode(MULTIPLY);
+      translate(150, 150);
+      fill(247, 76, 207);
+      ellipse(0, 0, 120, 120);
     pop()
 
     push() //DARKEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
-    translate(450, 450);
-    fill(0, 242, 199);
-      triangle(-52, 30, -52, -30, 0, 0);
-      rotation(60)
-      triangle(-52, 30, -52, -30, 0, 0);
-      rotation(60)
-      triangle(-52, 30, -52, -30, 0, 0);
-      rotation(60)
-      triangle(-52, 30, -52, -30, 0, 0);
-      rotation(60)
-      triangle(-52, 30, -52, -30, 0, 0);
-      rotation(60)
-      triangle(-52, 30, -52, -30, 0, 0);
+      translate(150, 150);
+      fill(0, 242, 199);
+      for (let i=0; i<6; i++) {
+        triangle(-52, 30, -52, -30, 0, 0);
+        rotation(60)
+      }
     pop()
 
     push() //LIGHTEST TRIANGLE IN THE CENTRAL HEXAGON SHAPE
-    translate(450, 450);
-    fill(197, 255, 215);
-      triangle(-52, -30, 0, 0, -35, 0)
-      rotation(60)
-      triangle(-52, -30, 0, 0, -35, 0)
-      rotation(60)
-      triangle(-52, -30, 0, 0, -35, 0)
-      rotation(60)
-      triangle(-52, -30, 0, 0, -35, 0)
-      rotation(60)
-      triangle(-52, -30, 0, 0, -35, 0)
-      rotation(60)
-      triangle(-52, -30, 0, 0, -35, 0)
+      translate(150, 150);
+      fill(197, 255, 215);
+      for (let i=0; i<6; i++) {
+        triangle(-52, -30, 0, 0, -35, 0)
+        rotation(60)
+      }
     pop()
 
     push() // CENTRAL TURQUOIUSE HEXAGON
-    translate(450, 450);
-    fill(0, 144, 207);
-      triangle(-52, 30, -35, 0, 0, 0)
-      rotation(60)
-      triangle(-52, 30, -35, 0, 0, 0)
-      rotation(60)
-      triangle(-52, 30, -35, 0, 0, 0)
-      rotation(60)
-      triangle(-52, 30, -35, 0, 0, 0)
-      rotation(60)
-      triangle(-52, 30, -35, 0, 0, 0)
-      rotation(60)
-      triangle(-52, 30, -35, 0, 0, 0)
+      translate(150, 150);
+      fill(0, 144, 207);
+      for (let i=0; i<6; i++) {
+        triangle(-52, 30, -35, 0, 0, 0)
+        rotation(60)
+      }
     pop()
-
-
 
 
   }
